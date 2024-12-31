@@ -8,10 +8,8 @@ const Footer = () => {
       <div>
         <img src={assets.logo} className="w-32 mb-5" alt=""></img>
         <p className="text-gray-600 w-full md:w-2/3">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+        ForeverBuy: Revolutionizing Clothing E-Commerce<br/><br/>
+        ForeverBuy is a modern clothing e-commerce platform that aims to provide an unparalleled shopping experience. With a curated selection of stylish and affordable fashion, ForeverBuy caters to a diverse audience, offering a seamless blend of quality, variety, and convenience.
         </p>
       </div>
 
@@ -28,8 +26,8 @@ const Footer = () => {
       <div>
         <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
         <ul className="flex flex-col text-gray-600 gap-1">
-          <li>+1-000-000-0000</li>
-          <li>foreveryou@gmail.com</li>
+          <li>+(415) 555-0132</li>
+          <li>foreverBuy@gmail.com</li>
         </ul>
       </div>
       
