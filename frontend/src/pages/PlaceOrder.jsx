@@ -71,11 +71,12 @@ const PlaceOrder = () => {
             }else{
               toast.error(responseStripe.data.message); 
             }
-            break;  
-         default:
+            break; 
           case 'razorpay':
             toast.error('Razorpay is not available right now, try Stripe or Cash on Delivery');
-            break;
+            break; 
+         default:
+          break;
        }
     } catch (error) {
       console.log(error);

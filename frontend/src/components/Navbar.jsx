@@ -38,6 +38,9 @@ const Navbar = () => {
           <p>CONTACT</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
+        <NavLink to="https://forever-adminn-ebon.vercel.app" target="_blank" className="border px-4 py-1 text-xs rounded-full -mt-2">
+        <p className="mt-1">ADMIN PANEL</p>  
+        </NavLink>
       </ul>
       <div className="flex item-center gap-6">
         <img

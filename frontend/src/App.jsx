@@ -1,5 +1,5 @@
-import React from 'react'
-import {Routes,Route} from 'react-router-dom'
+import React, { useEffect } from 'react'
+import {Routes,Route, useLocation} from 'react-router-dom'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Collection from './pages/Collection'
@@ -17,6 +17,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
 const App = () => {
    
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to the top of the page when the route changes
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [location]);
+
+
   return ( 
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <ToastContainer/>
