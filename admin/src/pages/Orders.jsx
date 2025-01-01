@@ -53,9 +53,15 @@ const Orders = ({ token }) => {
 
   return (
     <div>
-      <h3>Orders Page</h3>
+      <h2>Orders Page</h2>
       <div>
-        {orders.map((order, index) => (
+        { 
+        orders.length === 0 ? (
+            <div className="text-center text-gray-600 py-10">
+              <h3>No orders yet!</h3>
+            </div>
+          ):( 
+            orders.map((order, index) => (
           <div className="grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-3 items-start border-2 border-gray-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700" key={index}>
             <img className="w-12" src={assets.parcel_icon} alt="" />
             <div>
@@ -103,11 +109,10 @@ const Orders = ({ token }) => {
               <option value="Packing">Packing</option>
               <option value="Shipped">Shipped</option>
               <option value="Out for delivery">Out for delivery</option>
-              <option value="Delivered">Delivered</option>
-            </select>
+                 </select>
           </div>
-        ))}
-      </div>
+        )))}
+       </div>
     </div>
   );
 };
