@@ -31,8 +31,7 @@ const Cart = () => {
        <div className='text-2xl mb-3'>
         <Title text1={'YOUR'} text2={'CART'}/>
        </div>
-       <div>
-        {token ? '' : navigate('/login')}
+       <div>   
         {
           cartData.length === 0 ? (
             <div className="text-center text-gray-500 py-10">
