@@ -33,6 +33,17 @@ const Cart = () => {
        </div>
        <div>
         {
+          cartData.length === 0 ? (
+            <div className="text-center text-gray-500 py-10">
+              <p>Your cart is empty!</p>
+              <button 
+                onClick={() => navigate('/')} 
+                className="mt-4 bg-black text-white text-sm px-8 py-3"
+              >
+                CONTINUE SHOPPING
+              </button>
+            </div>
+          ) : (
           cartData.map((item,index)=>{
             const productData=products.find((products)=>products._id==item._id);
             return (
@@ -52,6 +63,7 @@ const Cart = () => {
               </div>
             )
          })
+        )
         }
        </div>
        <div className='flex justify-end my-20'>
