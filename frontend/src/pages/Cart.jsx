@@ -4,7 +4,7 @@ import Title from '../components/Title';
 import { assets } from "../assets/assets";
 import CartTotal from '../components/CartTotal';
 const Cart = () => {
-  const {currency,products,cartItems,updateQuantity,navigate}=useContext(ShopContext);
+  const {currency,products,cartItems,updateQuantity,navigate,token}=useContext(ShopContext);
   const [cartData,setCartData]=useState([])
 
   useEffect(()=>{
@@ -32,6 +32,7 @@ const Cart = () => {
         <Title text1={'YOUR'} text2={'CART'}/>
        </div>
        <div>
+        {token ? '' : navigate('/login')}
         {
           cartData.length === 0 ? (
             <div className="text-center text-gray-500 py-10">
